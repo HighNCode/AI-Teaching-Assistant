@@ -4,7 +4,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { DialogFooter } from '@/components/ui/dialog';
 import { ParentUpdate } from '@/types';
-import { showSuccess, showError } from '@/lib/utils/toast.ts';
+import { showSuccess, showError } from '@/lib/utils/toast';
 import { Upload } from 'lucide-react';
 import { generateParentUpdates } from '@/services/api';
 
