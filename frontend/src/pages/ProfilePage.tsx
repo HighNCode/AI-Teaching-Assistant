@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/context/AuthContext';
-import { showSuccess, showError, showLoading, dismissToast } from '@/lib/utils/toast';
+import { showSuccess, showError, showLoading, dismissToast } from '@/lib/utils/toast.ts';
 import { User } from '@/types';
 
 const passwordSchema = z.object({

@@ -5,7 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { DialogFooter } from '@/components/ui/dialog';
 import { LessonPlan, Worksheet } from '@/types';
-import { showSuccess, showError } from '@/lib/utils/toast';
+import { showSuccess, showError } from '@/lib/utils/toast.ts';
 import { Download, Save } from 'lucide-react';
 import { generateLessonPlan } from '@/services/api';
 

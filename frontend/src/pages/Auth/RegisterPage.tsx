@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/context/AuthContext';
-import { showLoading, dismissToast } from '@/lib/utils/toast';
+import { showLoading, dismissToast } from '@/lib/utils/toast.ts';
 
 const registerSchema = z.object({
   name: z.string().optional(),

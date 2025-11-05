@@ -9,7 +9,7 @@ import { Label } from '@/components/ui/label';
 import { ArrowLeft, FileText, MessageSquareText, PlusCircle, Download, Copy, Trash2, Edit } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import { Project, LessonPlan, Worksheet, ParentUpdate } from '@/types';
-import { showSuccess, showError } from '@/lib/utils/toast';
+import { showSuccess, showError } from '@/lib/utils/toast.ts';
 import LessonPlanGenerator from '@/components/LessonPlanGenerator';
 import ParentUpdateGenerator from '@/components/ParentUpdateGenerator';
 import { Textarea } from '@/components/ui/textarea';
