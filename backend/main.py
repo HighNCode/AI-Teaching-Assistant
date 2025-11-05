@@ -1,4 +1,5 @@
 import os
+from contextlib import asynccontextmanager
 from anyio import ConnectionFailed
 from fastapi import FastAPI, APIRouter, HTTPException
 from fastapi.staticfiles import StaticFiles
@@ -10,15 +11,15 @@ from database import connect_to_mongo, close_mongo_connection, get_db
 
 load_dotenv()
 
-app = FastAPI()
-
-@app.on_event("startup")
-async def startup_event():
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Connect to MongoDB on startup
     connect_to_mongo()
-
-@app.on_event("shutdown")
-async def shutdown_event():
+    yield
+    # Close MongoDB connection on shutdown
     close_mongo_connection()
+
+app = FastAPI(lifespan=lifespan)
 
 
 # CORS configuration
