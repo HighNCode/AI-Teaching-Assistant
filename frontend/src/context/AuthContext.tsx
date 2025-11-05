@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { User } from '@/types';
-import { showSuccess, showError } from '@/utils/toast';
+import { showSuccess, showError } from '@/lib/utils/toast';
 
 interface AuthContextType {
   user: User | null;

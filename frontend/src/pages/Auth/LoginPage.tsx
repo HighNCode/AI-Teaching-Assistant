@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/context/AuthContext';
-import { showLoading, dismissToast } from '@/utils/toast';
+import { showLoading, dismissToast } from '@/lib/utils/toast';
 
 const loginSchema = z.object({
   email: z.string().email({ message: 'Invalid email address' }),

@@ -13,29 +13,12 @@ import ProfilePage from "./pages/ProfilePage"; // Import the new ProfilePage
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Layout from "./components/Layout";
-import { useAuth } from "./context/AuthContext";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-
-
 const queryClient = new QueryClient();
 
 const AppContent = () => {
-  const { isLoggedIn } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // Redirect from the initial loading page based on auth status
-    if (window.location.pathname === '/' && isLoggedIn) {
-      navigate('/dashboard', { replace: true });
-    } else if (window.location.pathname === '/' && !isLoggedIn) {
-      navigate('/login', { replace: true });
-    }
-  }, [isLoggedIn, navigate]);
-
   return (
     <Routes>
-      <Route path="/" element={<Index />} /> {/* Initial loading/redirect page */}
+      <Route path="/" element={<Index />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
 
