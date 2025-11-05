@@ -126,7 +126,7 @@ const DashboardPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {projects.map((project) => (
             <Card key={project.id} className="hover:shadow-lg transition-shadow relative">
-              <Link to={`/project/${project.id}`} className="block p-6">
+              <Link to={`/projects/${project.id}`} className="block p-6">
                 <CardHeader className="p-0 pb-2">
                   <CardTitle>{project.name}</CardTitle>
                   <CardDescription>Created: {new Date(project.createdAt).toLocaleDateString()}</CardDescription>

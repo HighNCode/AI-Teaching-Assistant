@@ -34,14 +34,10 @@ export const getProjectById = async (projectId: string): Promise<Project> => {
   project.parentUpdates = project.parentUpdates || [];
   return project;
 };
+
 export const getProjects = async (): Promise<Project[]> => {
   const response = await api.get('/projects');
-  // The backend returns _id, but the frontend expects id.
-  return response.data.map((project: any) => {
-    project.id = project._id;
-    delete project._id;
-    return project;
-  });
+  return response.data; // backend already provides 'id'
 };
 
 export const createProject = async (project: { name: string }): Promise<Project> => {

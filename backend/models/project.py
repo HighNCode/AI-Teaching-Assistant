@@ -24,7 +24,7 @@ class ParentUpdate(BaseModel):
     draftText: str
 
 class Project(BaseModel):
-    id: Optional[str] = Field(alias='_id', default=None)
+    id: Optional[str] = None
     name: str
     userId: str
     lessonPlans: List[LessonPlan] = []
@@ -36,6 +36,7 @@ class Project(BaseModel):
         json_encoders = {
             ObjectId: str
         }
+
 
 class CreateProject(BaseModel):
     name: str
