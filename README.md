@@ -1,4 +1,4 @@
-# Project Title
+# AI Teaching Assistant
 
 This project is a full-stack application with a React frontend and a Python backend.
 
